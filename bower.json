@@ -1,0 +1,28 @@
+{
+  "name": "banana-app",
+  "version": "0.0.0",
+  "authors": [
+    "Grant Bartlett <hello@grant-bartlett.com>"
+  ],
+  "description": "Banana republic facebook application",
+  "main": "src/server/index.js",
+  "keywords": [
+    "node",
+    "angular"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-ui-router": "~0.2.15",
+    "angular-bootstrap": "~0.14.3",
+    "bootstrap-sass": "~3.3.5"
+  }
+}
