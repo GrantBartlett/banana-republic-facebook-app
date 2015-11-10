@@ -6,14 +6,18 @@ angular.module('Home').controller('HomeController', ['$scope', '$state', '$state
 
         // Handle submissions
         $scope.submit = function () {
-            $http.post('/form', $scope.user)
-                .success(function (data) {
-                    if (data === 'OK') {
-                        // do succusfull stuff!
-                    }
-                }).error(function (data) {
-                    console.log('ERROR', data);
-                })
+            $http({
+                method: 'post',
+                url: '/form'
+            }).then(function successCallback(response) {
+                // this callback will be called asynchronously
+                // when the response is available
+                console.log(response);
+            }, function errorCallback(response) {
+                // called asynchronously if an error occurs
+                // or server returns response with an error status.
+                console.log(response);
+            });
         };
     }
 ]);
