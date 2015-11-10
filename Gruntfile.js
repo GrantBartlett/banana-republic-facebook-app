@@ -43,7 +43,7 @@ module.exports = function (grunt) {
         watch: {
             public: {
                 files: ['src/public/**'],
-                tasks: ['copy', 'sass:development']
+                tasks: ['copy', 'sass:development', 'ngAnnotate']
             }
         },
 

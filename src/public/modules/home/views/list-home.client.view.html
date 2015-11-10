@@ -1,1 +1,26 @@
-<p>Calling from home view.html</p>
+<div class="container">
+    <h3>Enter your details</h3>
+
+    <p>Never miss an update!</p>
+
+    <form name="userForm" ng-submit="submit()" ng-controller="HomeController">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" class="form-control" id="name" placeholder="Name" ng-model="user.name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" email="email" class="form-control" id="email" placeholder="Email" ng-model="user.email">
+        </div>
+
+        <button type="submit" class="btn btn-default">Submit</button>
+
+
+        <div ng-messages="userForm.name.$error">
+            <p ng-message="minlength">Your name is too short.</p>
+            <p ng-message="maxlength">Your name is too long.</p>
+            <p ng-message="required">Your name is required.</p>
+        </div>
+    </form>
+</div>

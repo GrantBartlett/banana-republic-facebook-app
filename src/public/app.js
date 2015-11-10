@@ -1,6 +1,8 @@
 angular.module('app', [
     'ui.router',
+    'ngMessages',
     'ui.bootstrap',
+    'ngSanitize',
     'Home'
 ]);
 
