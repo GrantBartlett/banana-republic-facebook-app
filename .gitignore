@@ -18,6 +18,7 @@ coverage
 .grunt
 
 dist
+src/public/lib
 
 # Dependency directory
 # Deployed apps should consider commenting this line out:
