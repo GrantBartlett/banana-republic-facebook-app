@@ -4,23 +4,25 @@
     <p>Never miss an update!</p>
 
     <form name="userForm" ng-submit="submit()" ng-controller="HomeController">
-        <div class="form-group">
+        <div class="form-group" validate-input>
             <label for="name">Name</label>
-            <input type="text" name="name" class="form-control" id="name" placeholder="Name" ng-model="user.name" required>
+            <input type="text" name="name" class="form-control" id="name" placeholder="Name" ng-model="user.name"
+                   required>
+
+            <div ng-messages="userForm.name.$error" ng-if="userForm.name.$dirty">
+                <p ng-message="required">Please enter a name</p>
+            </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" validate-input>
             <label for="email">Email address</label>
-            <input type="email" email="email" class="form-control" id="email" placeholder="Email" ng-model="user.email">
+            <input type="email" name="email" class="form-control" id="email" placeholder="Email" ng-model="user.email" required>
+
+            <div ng-messages="userForm.email.$error" ng-if="userForm.email.$dirty">
+                <p ng-message="required">Please enter an email address</p>
+            </div>
         </div>
 
-        <button type="submit" class="btn btn-default">Submit</button>
-
-
-        <div ng-messages="userForm.name.$error">
-            <p ng-message="minlength">Your name is too short.</p>
-            <p ng-message="maxlength">Your name is too long.</p>
-            <p ng-message="required">Your name is required.</p>
-        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
     </form>
 </div>
