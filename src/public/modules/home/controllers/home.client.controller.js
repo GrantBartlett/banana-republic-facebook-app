@@ -10,6 +10,11 @@ angular.module('Home').controller('HomeController', ['$scope', '$state', '$state
                 .success(function (data, status) {
                     if (status === 200) {
                         console.log('Success', data);
+                        $scope.userForm.show = true;
+
+                        setTimeout(function(){
+                            $scope.userForm.showText = true;
+                        }, 500);
                     }
                 }).error(function (data) {
                     if (status != 200) {
@@ -17,5 +22,6 @@ angular.module('Home').controller('HomeController', ['$scope', '$state', '$state
                     }
                 })
         };
+
     }
 ]);

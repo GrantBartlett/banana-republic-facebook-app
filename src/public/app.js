@@ -3,6 +3,7 @@ angular.module('app', [
     'ngMessages',
     'ui.bootstrap',
     'ngSanitize',
+    'ng.shims.placeholder',
     'Home'
 ]);
 

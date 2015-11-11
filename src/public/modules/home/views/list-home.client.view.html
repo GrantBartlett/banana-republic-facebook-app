@@ -1,28 +1,40 @@
-<div class="container">
-    <h3>Enter your details</h3>
+<div class="container" ng-controller="HomeController">
+    <section class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="jumbo"></div>
+            <div class="angle-container">
+                <div class="angle text-center">
+                    <h1 class="text-uppercase">Are you ready?</h1>
 
-    <p>Never miss an update!</p>
-
-    <form name="userForm" ng-submit="submit()" ng-controller="HomeController" novalidate>
-        <div class="form-group" validate-input>
-            <label for="name">Name</label>
-            <input type="text" name="name" class="form-control" id="name" placeholder="Name" ng-model="user.name"
-                   required>
-
-            <div ng-messages="userForm.name.$error" ng-if="userForm.name.$dirty">
-                <p ng-message="required">Please enter a name</p>
+                    <p class="lead">Because we are.</p>
+                    <i class="fa fa-chevron-down fa-fw fa-lg animated infinite bounce"></i>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="form-group" validate-input>
-            <label for="email">Email address</label>
-            <input type="email" name="email" class="form-control" id="email" placeholder="Email" ng-model="user.email" required>
+    <section class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+            <p class="intro" ng-hide="userForm.show">
+                Unmissable <strong>offers</strong> and <strong>new collection</strong> alerts are just a few of the
+                <strong>treats</strong> waiting for you! All we need to know is how to get in touch...
+            </p>
 
-            <div ng-messages="userForm.email.$error" ng-if="userForm.email.$dirty">
-                <p ng-message="required">Please enter an email address</p>
-            </div>
+            <form name="userForm" ng-submit="submit()" ng-hide="userForm.show" class="form-inline" novalidate>
+                <div class="form-group" validate-input>
+                    <label class="sr-only" for="emailinput">Email address</label>
+                    <input type="email" name="email" class="form-control input-lg input-wide" id="emailinput"
+                           placeholder="Enter an email address" ng-model="user.email" required>
+                </div>
+
+                <button type="submit" class="btn btn-black input-lg" ng-disabled="userForm.$invalid">
+                    Let's go
+                </button>
+
+                <div ng-messages="userForm.email.$error" ng-if="userForm.email.$dirty">
+                    <p ng-message="required">Please enter an email address</p>
+                </div>
+            </form>
         </div>
-
-        <button type="submit" class="btn btn-success" ng-disabled="userForm.$invalid">Submit</button>
-    </form>
+    </section>
 </div>

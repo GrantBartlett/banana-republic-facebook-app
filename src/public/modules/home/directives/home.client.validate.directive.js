@@ -1,7 +1,6 @@
 'use strict';
 
 angular.module('Home').directive('validateInput', [function () {
-
     return {
         restrict: 'A',
         require: '^form',
@@ -16,9 +15,8 @@ angular.module('Home').directive('validateInput', [function () {
 
             // only apply the has-error class after the user leaves the text box
             inputNgEl.bind('blur', function () {
-                el.toggleClass('has-error', formCtrl[inputName].$invalid);
+                el.toggleClass('has-error animated shake', formCtrl[inputName].$invalid);
             })
         }
     }
-
 }]);
