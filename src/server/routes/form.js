@@ -3,8 +3,9 @@ var db = require('monk')('localhost/banana-republic-app');
 exports.save = function (req, res) {
     // Return if missing required data
     if (!req.body.name || !req.body.email) {
-        res.sendStatus(400);
+        return res.sendStatus(400);
     }
+    console.log(req);
 
     var users = db.get('users');
 
