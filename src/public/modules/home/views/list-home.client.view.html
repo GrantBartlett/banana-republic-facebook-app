@@ -1,13 +1,20 @@
-<div class="container" ng-controller="HomeController">
+<div class="container" ng-controller="HomeController" dir="{{ lngDirection }}">
+
     <section class="row">
         <div class="col-md-8 col-md-offset-2">
+            <small class="text-center"><a href="#" ng-click="toggleLanguage()">{{ locales.header.language }}</a></small>
             <div class="jumbo"></div>
             <div class="angle-container">
-                <div class="angle text-center">
-                    <h1 class="text-uppercase">Are you ready?</h1>
+                <div class="angle text-center" ng-hide="userForm.success">
+                    <h1 class="text-uppercase">{{ locales.enter.title }}</h1>
 
-                    <p class="lead">Because we are.</p>
+                    <p class="lead">{{ locales.enter.lead }}</p>
                     <i class="fa fa-chevron-down fa-fw fa-lg animated infinite bounce"></i>
+                </div>
+
+                <div class="angle text-center animated fadeInUp" ng-show="userForm.success">
+                    <h1 class="text-uppercase">{{ locales.success.title }}</h1>
+                    <p class="lead">{{ locales.success.lead }}</p>
                 </div>
             </div>
         </div>
@@ -15,24 +22,22 @@
 
     <section class="row">
         <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-            <p class="intro" ng-hide="userForm.show">
-                Unmissable <strong>offers</strong> and <strong>new collection</strong> alerts are just a few of the
-                <strong>treats</strong> waiting for you! All we need to know is how to get in touch...
-            </p>
 
-            <form name="userForm" ng-submit="submit()" ng-hide="userForm.show" class="form-inline" novalidate>
+            <p class="intro" ng-hide="userForm.success" ng-bind-html="locales.enter.body"></p>
+
+            <form name="userForm" ng-submit="submit()" ng-hide="userForm.success" class="form-inline" novalidate>
                 <div class="form-group" validate-input>
-                    <label class="sr-only" for="emailinput">Email address</label>
+                    <label class="sr-only" for="emailinput">{{ locales.form.placeholder }}</label>
                     <input type="email" name="email" class="form-control input-lg input-wide" id="emailinput"
-                           placeholder="Enter an email address" ng-model="user.email" required>
+                           placeholder="{{ locales.form.placeholder}}" ng-model="user.email" required>
                 </div>
 
                 <button type="submit" class="btn btn-black input-lg" ng-disabled="userForm.$invalid">
-                    Let's go
+                    {{ locales.form.submit }}
                 </button>
 
                 <div ng-messages="userForm.email.$error" ng-if="userForm.email.$dirty">
-                    <p ng-message="required">Please enter an email address</p>
+                    <p ng-message="required">{{ locales.errors.email }}</p>
                 </div>
             </form>
         </div>

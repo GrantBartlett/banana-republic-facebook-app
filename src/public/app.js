@@ -1,6 +1,7 @@
 angular.module('app', [
     'ui.router',
     'ngMessages',
+    'ngSanitize',
     'ui.bootstrap',
     'ngSanitize',
     'ng.shims.placeholder',
