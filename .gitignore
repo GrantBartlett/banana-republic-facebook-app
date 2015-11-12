@@ -32,3 +32,9 @@ bower_components
 
 src/public/lib/
 
+*.key
+*.crt
+*.csr
+*.pem
+*.key.org
+>>>>>>> https support
