@@ -13,6 +13,7 @@
     "mongoose": "^4.2.4",
     "monk": "^1.0.1",
     "ng-annotate": "^1.0.2",
+    "pem": "^1.8.1",
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
