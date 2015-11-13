@@ -1,4 +1,4 @@
-var db = require('monk')(process.env.MONGOLAB_URI | 'localhost/banana-republic-app');
+var db = require('monk')(process.env.MONGOLAB_URI || 'localhost/banana-republic-app');
 
 exports.save = function (req, res) {
     // Return if missing required data
