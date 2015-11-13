@@ -22,6 +22,11 @@ app.use(express.static(__dirname + '/../../dist/public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
+// For Heroku & Facebook...
+app.get('/', function(req, res) {
+    res.render(__dirname + '/../../dist/public/index.html');
+});
+
 // Form endpoint
 app.post('/form', form.save);
 
