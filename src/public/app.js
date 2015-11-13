@@ -5,7 +5,8 @@ angular.module('app', [
     'ui.bootstrap',
     'ngSanitize',
     'ng.shims.placeholder',
-    'Home'
+    'Home',
+    'Core'
 ]);
 
 angular.module('app').config(configuration);

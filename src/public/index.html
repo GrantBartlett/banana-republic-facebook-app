@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <script src="https://use.typekit.net/cds8mtm.js"></script>
-    <script>try{Typekit.load({ async: false });}catch(e){}</script>
+    <script>try {
+        Typekit.load({async: false});
+    } catch (e) {
+    }</script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,7 +23,13 @@
     <![endif]-->
 </head>
 
-<body ng-app="app">
+<body ng-app="app" ng-controller="LanguageController" ng-init="toggleLanguage()">
+
+<div class="language text-center">
+    <small>
+        <a href="#" ng-click="toggleLanguage()" ng-bind-html="locales.header.language"></a>
+    </small>
+</div>
 
 <header class="container logo">
     <div class="row">

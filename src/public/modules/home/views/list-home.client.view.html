@@ -1,20 +1,17 @@
 <div class="container" ng-controller="HomeController" dir="{{ lngDirection }}">
-
     <section class="row">
         <div class="col-md-8 col-md-offset-2">
-            <small class="text-center"><a href="#" ng-click="toggleLanguage()">{{ locales.header.language }}</a></small>
             <div class="jumbo"></div>
             <div class="angle-container">
                 <div class="angle text-center" ng-hide="userForm.success">
-                    <h1 class="text-uppercase">{{ locales.enter.title }}</h1>
-
-                    <p class="lead">{{ locales.enter.lead }}</p>
+                    <h1 class="text-uppercase" ng-bind-html="locales.enter.title "></h1>
+                    <p class="lead" ng-bind-html="locales.enter.lead"></p>
                     <i class="fa fa-chevron-down fa-fw fa-lg animated infinite bounce"></i>
                 </div>
 
-                <div class="angle text-center animated fadeInUp" ng-show="userForm.success">
-                    <h1 class="text-uppercase">{{ locales.success.title }}</h1>
-                    <p class="lead">{{ locales.success.lead }}</p>
+                <div class="angle text-center animated fadeIn" ng-show="userForm.success">
+                    <h1 class="text-uppercase" ng-bind-html="locales.success.title"></h1>
+                    <p class="lead" ng-bind-html="locales.success.lead"></p>
                 </div>
             </div>
         </div>
