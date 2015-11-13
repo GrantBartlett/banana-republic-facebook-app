@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "nodemon --exec node index.js"
+    "postinstall": "grunt build",
+    "start": "node src/server/index.js"
   },
   "name": "banana-app",
   "version": "1.0.0",
