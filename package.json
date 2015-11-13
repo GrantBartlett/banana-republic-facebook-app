@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "postinstall": "grunt build",
+    "postinstall": "bower install && grunt build",
     "start": "node src/server/index.js"
   },
   "name": "banana-app",
