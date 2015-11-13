@@ -1,1 +1,1 @@
-web: grunt start
+web: node src/server/index.js
