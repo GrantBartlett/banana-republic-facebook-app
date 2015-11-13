@@ -27,3 +27,8 @@ var server = app.listen(app.get('port'), function () {
     var port = server.address().port;
     console.log('Banana Republic App listening at http://%s:%s', host, port);
 });
+
+// Facebook POST route
+app.post('/*', function (req, res) {
+    res.sendfile(__dirname + '/../../dist/public/index.html');
+});
