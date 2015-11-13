@@ -10,7 +10,7 @@
     "dotenv": "^1.2.0",
     "express": "^4.13.3",
     "lodash": "^3.10.0",
-    "mongodb": "^2.0.47",
+    "mongodb": "1.4.x",
     "mongoose": "^4.2.4",
     "monk": "^1.0.1",
     "ng-annotate": "^1.0.2",
