@@ -17,12 +17,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 // Facebook POST route
-app.post('/*', function (req, res) {
+app.post('/', function (req, res) {
     res.sendFile(path.resolve('dist/public/index.html'));
 });
 
 // Form endpoint
 app.post('/form', form.save);
+app.get('/form', form.save);
 
 // Server
 var server = app.listen(app.get('port'), function () {
