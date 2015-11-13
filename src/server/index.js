@@ -8,22 +8,14 @@ var fs = require('fs');
 // Routes
 var form = require('./routes/form');
 
+var port = process.env.PORT || 5000;
+
 // Server
-var server = app.listen(5000, function () {
+var server = app.listen(port, function () {
     var host = server.address().address;
     var port = server.address().port;
     console.log('Banana Republic App listening at http://%s:%s', host, port);
 });
-
-//// HTTPS Server
-//https.createServer({
-//    key: fs.readFileSync('server.key'),
-//    cert: fs.readFileSync('server.crt')
-//}, app).listen(8443, function () {
-//    var host = this.address().address;
-//    var port = this.address().port;
-//    console.log('Banana Republic App listening at https://%s:%s', host, port);
-//});
 
 // Setup public folder routing
 app.use(express.static(__dirname + '/../../dist/public'));
