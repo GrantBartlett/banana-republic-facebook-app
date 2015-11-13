@@ -90,6 +90,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-ng-annotate');
 
     grunt.registerTask('start', ['clean', 'copy', 'sass:development', 'ngAnnotate', 'concurrent:development']);
-    grunt.registerTask('build', ['clean', 'copy', 'sass:development', 'ngAnnotate']);
+    grunt.registerTask('build', ['clean', 'copy', 'ngAnnotate', 'sass:development' ]);
     grunt.registerTask('test', ['mochaTest:server'])
 };
