@@ -15,10 +15,6 @@ app.use(express.static(__dirname + '/../../dist/public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.get('/', function(request, response) {
-    response.render('index.html');
-});
-
 // Form endpoint
 app.post('/form', form.save);
 
