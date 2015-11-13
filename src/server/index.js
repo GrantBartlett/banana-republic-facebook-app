@@ -8,23 +8,15 @@ var fs = require('fs');
 // Routes
 var form = require('./routes/form');
 
-var port = process.env.PORT || 5000;
-
-// Server
-var server = app.listen(port, function () {
-    var host = server.address().address;
-    var port = server.address().port;
-    console.log('Banana Republic App listening at http://%s:%s', host, port);
-});
+app.set('port', (process.env.PORT || 5000));
 
 // Setup public folder routing
 app.use(express.static(__dirname + '/../../dist/public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-// For Heroku & Facebook...
-app.get('/', function(req, res) {
-    res.render(__dirname + '/../../dist/public');
+app.get('/', function(request, response) {
+    response.render('index.html');
 });
 
 // Form endpoint
@@ -32,3 +24,10 @@ app.post('/form', form.save);
 
 // Error handling
 app.use(error.clientErrorHandler);
+
+// Server
+var server = app.listen(app.get('port'), function () {
+    var host = server.address().address;
+    var port = server.address().port;
+    console.log('Banana Republic App listening at http://%s:%s', host, port);
+});
