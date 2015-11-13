@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 // For Heroku & Facebook...
 app.get('/', function(req, res) {
-    res.render(__dirname + '/../../dist/public/index.html');
+    res.render(__dirname + '/../../dist/public');
 });
 
 // Form endpoint
