@@ -13,7 +13,7 @@
   },
   "form": {
     "placeholder": "Enter an email address(AR)",
-    "submit": "Let's go(AR)"
+    "submit": "Let's go"
   },
   "errors": {
     "email": "Please enter an email address(AR)"

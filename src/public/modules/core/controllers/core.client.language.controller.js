@@ -6,11 +6,11 @@ angular.module('Core').controller('LanguageController', ['$scope', '$state', '$s
 
         $scope.toggleLanguage = function () {
             switch ($scope.lngDirection) {
-                case 'en' :
+                case 'ltr' :
                     languageService
                         .getArabic()
                         .then(function (data) {
-                            $scope.lngDirection = 'ar';
+                            $scope.lngDirection = 'rtl';
                             $scope.locales = data;
                         });
                     break;
@@ -19,7 +19,7 @@ angular.module('Core').controller('LanguageController', ['$scope', '$state', '$s
                     languageService
                         .getEnglish()
                         .then(function (data) {
-                            $scope.lngDirection = 'en';
+                            $scope.lngDirection = 'ltr';
                             $scope.locales = data;
                         });
                     break;
@@ -28,7 +28,7 @@ angular.module('Core').controller('LanguageController', ['$scope', '$state', '$s
                     languageService
                         .getEnglish()
                         .then(function (data) {
-                            $scope.lngDirection = 'en';
+                            $scope.lngDirection = 'ltr';
                             $scope.locales = data;
                         });
                     break;
