@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('Home').factory('languageService', ['$http', '$q',
+angular.module('Core').factory('languageService', ['$http', '$q',
     function ($http, $q) {
         return {
             getEnglish: function () {
