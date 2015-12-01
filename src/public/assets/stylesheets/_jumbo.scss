@@ -5,11 +5,11 @@
   display: block;
   content: "";
   height: 500px;
-  margin-bottom: -100px;
+  margin-bottom: -120px;
 }
 
 .angle-container {
-  height: 350px;
+  height: 250px;
   position: relative;
   z-index: 1;
 
@@ -23,18 +23,17 @@
     height: 100%;
     background: black;
     z-index: -1;
-    -webkit-transform: skewY(-9deg);
-    -moz-transform: skewY(-9deg);
-    -ms-transform: skewY(-9deg);
-    -o-transform: skewY(-9deg);
-    transform: skewY(-9deg);
+    -webkit-transform: skewY(-13deg);
+    -moz-transform: skewY(-13deg);
+    -ms-transform: skewY(-13deg);
+    -o-transform: skewY(-13deg);
+    transform: skewY(-13deg);
     -webkit-backface-visibility: hidden;
   }
 
   .angle {
     color: #fff;
     position: relative;
-    top: 33%;
-    background: black;
+    top: 30%;
   }
 }
