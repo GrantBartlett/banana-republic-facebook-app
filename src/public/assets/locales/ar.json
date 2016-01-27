@@ -3,17 +3,17 @@
     "language": "View in English"
   },
   "enter": {
-    "title": "Are you ready (AR)?",
-    "lead": "Because we are.(AR)",
-    "body": "<strong>Unmissable offers</strong> and new <strong>collection alerts</strong> are just a few of the <strong>treats</strong> waiting for you! All we need to know is how to get in touch...(AR)"
+    "title": "هل أنتم جاهزون؟ ",
+    "lead": "لأننا جاهزون. ",
+    "body": "عروض لا تفوت، وإعلانات عن تشكيلة جديدة  ...في إنتظاركم!  كل ما نبغي معرفته هو كيفية التواصل معكم"
   },
   "success": {
-    "title": "Epic(AR)",
-    "lead": "You are just moments away from <br>awesome collection alerts.(AR)"
+    "title": "هيا بنا",
+    "lead": "محتوى حصري يبعد دقائق معدودة"
   },
   "form": {
-    "placeholder": "Enter an email address(AR)",
-    "submit": "Let's go"
+    "placeholder": "ادخلوا عنوان بريدكم الالكتروني",
+    "submit": "هيا بنا"
   },
   "errors": {
     "email": "Please enter an email address(AR)"
