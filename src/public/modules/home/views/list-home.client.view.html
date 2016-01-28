@@ -1,42 +1,45 @@
 <div class="container" ng-controller="HomeController" dir="{{ lngDirection }}">
-    <section class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="jumbo"></div>
-            <div class="angle-container">
-                <div class="angle text-center" ng-hide="userForm.success">
-                    <h1 class="text-uppercase" ng-bind-html="locales.enter.title "></h1>
-                    <p class="lead" ng-bind-html="locales.enter.lead"></p>
-                    <i class="fa fa-chevron-down fa-fw fa-lg animated infinite bounce"></i>
-                </div>
+  <section class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="jumbo"></div>
 
-                <div class="angle text-center animated fadeIn" ng-show="userForm.success">
-                    <h1 class="text-uppercase" ng-bind-html="locales.success.title"></h1>
-                    <p class="lead" ng-bind-html="locales.success.lead"></p>
-                </div>
-            </div>
+      <div class="complete text-center animated fadeIn" ng-if="userForm.success">
+        <h1 class="text-uppercase" ng-bind-html="locales.success.title"></h1>
+
+        <p class="lead" ng-bind-html="locales.success.lead"></p>
+      </div>
+
+      <div class="angle-container" ng-if="!userForm.success">
+        <div class="angle text-center" ng-hide="userForm.success">
+          <h1 class="text-uppercase" ng-bind-html="locales.enter.title "></h1>
+
+          <p class="lead" ng-bind-html="locales.enter.lead"></p>
+          <i class="fa fa-chevron-down fa-fw fa-lg animated infinite bounce"></i>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="row">
-        <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+  <section class="row">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
 
-            <p class="intro" ng-hide="userForm.success" ng-bind-html="locales.enter.body"></p>
+      <p class="intro" ng-hide="userForm.success" ng-bind-html="locales.enter.body"></p>
 
-            <form name="userForm" ng-submit="submit()" ng-hide="userForm.success" class="form-inline" novalidate>
-                <div class="form-group" validate-input>
-                    <label class="sr-only" for="emailinput">{{ locales.form.placeholder }}</label>
-                    <input type="email" name="email" class="form-control input-lg input-wide" id="emailinput"
-                           placeholder="{{ locales.form.placeholder}}" ng-model="user.email" required>
-                </div>
-
-                <button type="submit" class="btn btn-black input-lg" ng-disabled="userForm.$invalid">
-                    {{ locales.form.submit }}
-                </button>
-
-                <div ng-messages="userForm.email.$error" ng-if="userForm.email.$dirty">
-                    <p ng-message="required">{{ locales.errors.email }}</p>
-                </div>
-            </form>
+      <form name="userForm" ng-submit="submit()" ng-hide="userForm.success" class="form-inline" novalidate>
+        <div class="form-group" validate-input>
+          <label class="sr-only" for="emailinput">{{ locales.form.placeholder }}</label>
+          <input type="email" name="email" class="form-control input-lg input-wide" id="emailinput"
+                 placeholder="{{ locales.form.placeholder}}" ng-model="user.email" required>
         </div>
-    </section>
+
+        <button type="submit" class="btn btn-black input-lg" ng-disabled="userForm.$invalid">
+          {{ locales.form.submit }}
+        </button>
+
+        <div ng-messages="userForm.email.$error" ng-if="userForm.email.$dirty">
+          <p ng-message="required">{{ locales.errors.email }}</p>
+        </div>
+      </form>
+    </div>
+  </section>
 </div>

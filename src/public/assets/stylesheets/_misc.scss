@@ -2,25 +2,46 @@ html, body {
   font-family: "minerva-modern", sans-serif;
 }
 
-.logo {
-  padding-top: $header-height;
-}
-
-section {
-  margin-top: $header-height;
-  margin-bottom: $header-height;
-}
-
 h1 {
-  font-size: 48px;
+  font-size: 32px;
 }
 
 .lead {
-  font-size: 30px;
+  font-size: 24px;
 }
 
 .intro {
-  font-size: 25px;
+  font-size: 24px;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .logo {
+    padding-top: $header-height;
+  }
+
+  section {
+    margin-top: $header-height;
+    margin-bottom: $header-height;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+
+  .lead {
+    font-size: 30px;
+  }
+
+  .intro {
+    font-size: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
