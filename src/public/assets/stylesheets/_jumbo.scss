@@ -1,6 +1,7 @@
 .jumbo {
-  background-image: url(../images/jumbo.png);
-  background-position: 0 30%;
+  background-image: url(../images/jumbo-animated.gif);
+  background-size: 100%;
+  background-position: top;
   background-repeat: no-repeat;
   width: 100%;
   display: block;
@@ -54,8 +55,9 @@ header {
   }
 
   .jumbo {
-    background-image: url(../images/jumbo.png);
+    background-image: url(../images/jumbo-animated.gif);
     background-repeat: no-repeat;
+    background-position: top center;
     width: 100%;
     display: block;
     content: "";
